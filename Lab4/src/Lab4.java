@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Lab4 {
     public static final double eps = Math.pow(10,-6);
     public static final double res[] = {13.833333,4.670774,14,0.499822};
-    private final int n = 5;
+    private final int n = 4;
     private int number;
     private int method;
     private void input(){
@@ -32,7 +32,9 @@ public class Lab4 {
     }
 
     private void find3(){
-        Simpson duc = new Simpson();
+        Simpson duc = new Simpson(number,n,1,2);
+        duc.solve();
+
     }
 
     private void solve(){
@@ -41,7 +43,6 @@ public class Lab4 {
             case 2: find2(); break;
             case 3: find3(); break;
         }
-
     }
     public static void main(String[] args){
         Lab4 duc = new Lab4();
