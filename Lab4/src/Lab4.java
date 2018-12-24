@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Lab4 {
     public static final double eps = Math.pow(10,-6);
-    public static final double res[] = {13.833333,4.670774,14,0.499822};
+    public static final double res[] = {13.833333,4.670774,14,0.3862943611};//0.3862943611
     private final int n = 4;
     private int number;
     private int method;
@@ -12,7 +12,7 @@ public class Lab4 {
         System.out.println("1 :  integral from (1 to 2) of f(x) = x^2 + 3x + 7");//13.8(3)
         System.out.println("2 :  integral from (1 to 2) of f(x) = e^x");//4.671
         System.out.println("3 :  integral from (1 to 2) of f(x) = 4x+8");//14
-        System.out.println("4 :  integral from (1 to 2) of f(x) = cos(x)/2");//0.9996
+        System.out.println("4 :  integral from (1 to 2) of f(x) = ln(x)");//0.3862943611
         number = sc.nextInt();
         System.out.println("Please choose method you want");
         System.out.println("1: Rectangle method");
@@ -34,7 +34,6 @@ public class Lab4 {
     private void find3(){
         Simpson duc = new Simpson(number,n,1,2);
         duc.solve();
-
     }
 
     private void solve(){
@@ -48,5 +47,6 @@ public class Lab4 {
         Lab4 duc = new Lab4();
         duc.input();
         duc.solve();
+        //System.out.println(Math.cos(90));
     }
 }
